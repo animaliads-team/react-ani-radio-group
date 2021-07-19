@@ -12,6 +12,8 @@ var KEYCODE = {
   UP: 38
 };
 
+const tagName = 'ANI-RADIO';
+
 export default class App extends React.Component {
   componentDidMount() {
     const group = document.querySelectorAll('form ani-radio');
@@ -106,7 +108,7 @@ export default class App extends React.Component {
 
     while (first) {
       if (first.nodeType === Node.ELEMENT_NODE) {
-        if (first.tagName === 'ani-radio') return first;
+        if (first.tagName === tagName) return first;
       }
       first = first.nextSibling;
     }
@@ -119,7 +121,7 @@ export default class App extends React.Component {
 
     while (last) {
       if (last.nodeType === Node.ELEMENT_NODE) {
-        if (last.tagName === 'ani-radio') return last;
+        if (last.tagName === tagName) return last;
       }
       last = last.previousSibling;
     }
@@ -132,7 +134,7 @@ export default class App extends React.Component {
 
     while (next) {
       if (next.nodeType === Node.ELEMENT_NODE) {
-        if (next.tagName === 'ani-radio') return next;
+        if (next.tagName === tagName) return next;
       }
       next = next.nextSibling;
     }
@@ -145,7 +147,7 @@ export default class App extends React.Component {
 
     while (prev) {
       if (prev.nodeType === Node.ELEMENT_NODE) {
-        if (prev.tagName === 'ani-radio') return prev;
+        if (prev.tagName === tagName) return prev;
       }
       prev = prev.previousSibling;
     }
